@@ -5,32 +5,32 @@
 @tailwind utilities;
 
 @layer base {
-    :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
-        font-size: 0.9em;
-    }
+  :not(pre) > code {
+    @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+    font-size: 0.9em;
+  }
 
-    h1 {
-        @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
-    }
+  h1 {
+    @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
+  }
 }
 
 a {
-    @apply underline
+  @apply underline;
 }
 
 .markdown {
-    @apply mb-1;
+  @apply mb-1;
 }
 
 .alert .markdown {
-    @apply mb-0;
+  @apply mb-0;
 }
 
 .markdown p {
-    @apply mb-3;
+  @apply mb-3;
 }
 
 .btn:disabled {
-    @apply text-neutral-400 bg-neutral-700;
+  @apply text-neutral-400 bg-neutral-700;
 }
