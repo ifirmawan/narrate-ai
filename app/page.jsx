@@ -23,7 +23,7 @@ export default function Page() {
           From Key Points to Polished Narratives in Seconds
         </p>
         <Link
-          href="https://docs.netlify.com/frameworks/next-js/overview/"
+          href="/create-story"
           className="btn btn-lg btn-primary sm:btn-wide"
         >
           Get Started
