@@ -147,7 +147,7 @@ const CreateStory = () => {
               <strong>Generate</strong>
               <br />
               <p>
-                Let the AI work its magic! In moments, you'll have a fully
+                Let the AI work its magic! In moments, you&apos;ll have a fully
                 written draft.
               </p>
             </li>
