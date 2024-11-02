@@ -16,7 +16,7 @@ const CreateStory = () => {
     if (values?.story?.trim()?.length) {
       setGenerating(true);
       try {
-        const token = await executeRecaptcha(`create_story-${Date.now()}`);
+        const token = await executeRecaptcha('create_story');
         const verify = await fetch(
           'https://www.google.com/recaptcha/api/siteverify',
           {
@@ -67,6 +67,7 @@ const CreateStory = () => {
             onSubmit();
           }}
           className="w-full flex flex-col justify-center align-center gap-4 mb-6"
+          netlify
         >
           <textarea
             name="story"
