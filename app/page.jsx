@@ -26,7 +26,7 @@ export default function Page() {
           href="/create-story"
           className="btn btn-lg btn-primary sm:btn-wide"
         >
-          Get Started
+          Create Your Story Now
         </Link>
       </section>
       <section className="flex flex-col gap-4">

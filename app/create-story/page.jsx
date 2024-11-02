@@ -59,7 +59,7 @@ const CreateStory = () => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-4 lg:flex-row justify-between relative">
+    <div className="w-full flex flex-col gap-8 lg:flex-row lg:gap-16 xl:gap-4 justify-between relative">
       <div className="w-full xl:w-7/12">
         <form
           onSubmit={(e) => {
@@ -67,7 +67,7 @@ const CreateStory = () => {
             onSubmit();
           }}
           className="w-full flex flex-col justify-center align-center gap-4 mb-6"
-          netlify
+          data-netlify="true"
         >
           <textarea
             name="story"
