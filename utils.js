@@ -1,7 +1,7 @@
 import {
   uniqueNamesGenerator,
   adjectives,
-  animals,
+  animals
 } from 'unique-names-generator';
 
 /*
