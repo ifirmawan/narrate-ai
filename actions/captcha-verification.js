@@ -8,13 +8,9 @@ export const verifyToken = (token) =>
         {
           method: 'POST',
           headers: {
-            Accept: 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/x-www-form-urlencoded'
           },
-          body: JSON.stringify({
-            secret: process.env.GOOGLE_RECAPTCHA_SECRET_KEY,
-            response: token
-          })
+          body: `secret=${process.env.GOOGLE_RECAPTCHA_SECRET_KEY}&response=${token}`
         }
       );
       resolve(res.json());
