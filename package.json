@@ -21,7 +21,6 @@
     "unique-names-generator": "^4.7.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.8.1",
     "autoprefixer": "^10.4.18",
     "daisyui": "^4.12.8",
     "eslint": "8.57.1",
