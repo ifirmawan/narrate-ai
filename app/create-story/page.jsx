@@ -67,7 +67,6 @@ const CreateStory = () => {
             onSubmit();
           }}
           className="w-full flex flex-col justify-center align-center gap-4 mb-6"
-          data-netlify="true"
         >
           <textarea
             name="story"

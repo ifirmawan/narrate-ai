@@ -1,9 +1,3 @@
 [build]
   publish = ".next"
   command = "npm run build"
-
-[[plugins]]
-  package = "@opennextjs/netlify"
-
-[build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
