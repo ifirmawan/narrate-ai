@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import { useReCaptcha } from 'next-recaptcha-v3';
 import { createStory } from 'actions/mistral-ai';
+import { verifyToken } from 'actions/captcha-verification';
 
 const CreateStory = () => {
   const [generating, setGenerating] = useState(false);
@@ -17,21 +18,7 @@ const CreateStory = () => {
       setGenerating(true);
       try {
         const token = await executeRecaptcha('create_story');
-        const verify = await fetch(
-          'https://www.google.com/recaptcha/api/siteverify',
-          {
-            method: 'POST',
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              secret: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-              response: token
-            })
-          }
-        );
-        const resVerify = verify.json();
+        const resVerify = await verifyToken(token);
         console.log('resVerify', resVerify);
         if (resVerify?.success) {
           const res = await createStory(values.story);
