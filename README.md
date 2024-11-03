@@ -1,8 +1,3 @@
-Here's a GitHub `README.md` template for your Narrate AI project with installation and running instructions for a Next.js 14 app, including required environment variables.
-
----
-
-```markdown
 # Narrate AI
 
 Narrate AI is a demo application designed to generate stories, blogs, or journal entries based on key points or summaries, showcasing the power of Mistral AI for content creation.
@@ -84,8 +79,3 @@ We’d love to hear your feedback! If you encounter any issues or have suggestio
 ---
 
 © 2024 Narrate AI. Built by Iwan Firmawan.
-```
-
----
-
-This template is a solid starting point for users to understand the project, set it up, and get it running quickly. Let me know if there’s anything else you’d like to add!
