@@ -4,6 +4,7 @@ import { useCallback, useState } from 'react';
 import { useReCaptcha } from 'next-recaptcha-v3';
 import { createStory } from 'actions/mistral-ai';
 import { verifyToken } from 'actions/captcha-verification';
+import { convertMD2JSON } from 'utils';
 
 const CreateStory = () => {
   const [generating, setGenerating] = useState(false);
@@ -19,10 +20,9 @@ const CreateStory = () => {
       try {
         const token = await executeRecaptcha('create_story');
         const resVerify = await verifyToken(token);
-        console.log('resVerify', resVerify);
         if (resVerify?.success) {
           const res = await createStory(values.story);
-          const json = JSON.parse(res);
+          const json = JSON.parse(convertMD2JSON(res));
           if (typeof json === 'object') {
             setResults(json);
           }
