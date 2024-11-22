@@ -40,3 +40,18 @@ export function uniqueName() {
 
 export const uploadDisabled =
   process.env.NEXT_PUBLIC_DISABLE_UPLOADS?.toLowerCase() === 'true';
+
+export const convertMD2JSON = (markdown) => {
+  // Match content between ``` (including optional "```json")
+  const match = markdown.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
+  if (!match) {
+    return markdown;
+  }
+  const jsonContent = match[1]; // Extract the content inside the backticks
+  try {
+    // Use eval to safely convert it to JSON-like structure
+    return JSON.stringify(eval(`(${jsonContent})`));
+  } catch (error) {
+    return markdown;
+  }
+};
